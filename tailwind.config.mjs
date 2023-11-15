@@ -9,6 +9,7 @@ module.exports = {
 		extend: {
 			backgroundImage: {
 				'tuepah': "url('/public/tuepah-front.jpg')",
+				'tuepah-lg': "url('/public/tuepah-front-lg.jpg')",
 			}
 		},
 		colors: {
