@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from "../components/Hero.astro";
+
+import {Image} from 'astro:assets';
+import Gallery from "../components/Gallery.astro";
+const allGalleryImages = await Astro.glob('/src/images/galleries/**/*');
+const test = await Astro.glob('/src/images/galleries/test/*');
+const test2 = await Astro.glob('/src/images/galleries/test2/*');
+---
+
+<Layout title="John Duncan Ferguson - Portfolio">
+	<main class="pt-1">
+		<Hero slogan="Portfolio" more="some of the work I've done" cta="" url=""/>
+
+		<Gallery title="Test Gallery">
+			{test.map((img) => (
+					<div>
+						<Image src={img.default} width=""	alt="" class="h-auto max-w-full rounded-lg"	/>
+					</div>
+				))
+			}
+		</Gallery>
+
+		<Gallery title="All Gallery Images">
+			{allGalleryImages.map((img) => (
+				<div>
+					<Image src={img.default} width="" height="200px" alt="" class="h-auto max-w-full rounded-lg"/>
+				</div>
+			))
+			}
+		</Gallery>
+
+	</main>
+</Layout>

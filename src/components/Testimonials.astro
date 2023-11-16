@@ -1,0 +1,23 @@
+---
+import {getCollection} from 'astro:content';
+const testimonials = await getCollection('testimonials');
+---
+
+<div class="grid border border-base-300 shadow-sm dark:border-base-700 md:grid-cols-2">
+  {testimonials.map(testimonial => (
+      <figure
+          class="flex flex-col items-center justify-center p-8 text-center bg-base-300 border-b border-base-800-200 md:border-r dark:bg-base-800 dark:border-base-700">
+        <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+          <h3 class="text-xl font-semibold text-gray-900 dark:text-white">{testimonial.data.callout}</h3>
+          <p class="my-4">{testimonial.data.quote}</p>
+        </blockquote>
+        <figcaption class="flex items-center justify-center space-x-3">
+
+          <div class="space-y-0.5 font-medium dark:text-white text-left">
+            <div>{testimonial.data.author}</div>
+            <div class="text-sm text-gray-500 dark:text-gray-400">{testimonial.data.position}</div>
+          </div>
+        </figcaption>
+      </figure>
+    ))}
+    </div>
