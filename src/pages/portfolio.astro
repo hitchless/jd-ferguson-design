@@ -6,7 +6,6 @@ import {Image} from 'astro:assets';
 import Gallery from "../components/Gallery.astro";
 const allGalleryImages = await Astro.glob('/src/images/galleries/**/*');
 const test = await Astro.glob('/src/images/galleries/test/*');
-const test2 = await Astro.glob('/src/images/galleries/test2/*');
 ---
 
 <Layout title="John Duncan Ferguson - Portfolio">
@@ -25,7 +24,7 @@ const test2 = await Astro.glob('/src/images/galleries/test2/*');
 		<Gallery title="All Gallery Images">
 			{allGalleryImages.map((img) => (
 				<div>
-					<Image src={img.default} width="" height="200px" alt="" class="h-auto max-w-full rounded-lg"/>
+					<Image src={img.default} width="" height="200" alt="" class="h-auto max-w-full rounded-lg"/>
 				</div>
 			))
 			}
