@@ -15,7 +15,7 @@ const test = await Astro.glob('/src/images/galleries/test/*');
 		<Gallery title="Test Gallery">
 			{test.map((img) => (
 					<div>
-						<Image src={img.default} width=""	alt="" class="h-auto max-w-full rounded-lg"	/>
+						<Image src={img.default} alt="" class="h-auto max-w-full rounded-lg"	/>
 					</div>
 				))
 			}
@@ -24,7 +24,7 @@ const test = await Astro.glob('/src/images/galleries/test/*');
 		<Gallery title="All Gallery Images">
 			{allGalleryImages.map((img) => (
 				<div>
-					<Image src={img.default} width="" height="200" alt="" class="h-auto max-w-full rounded-lg"/>
+					<Image src={img.default} height="200" alt="" class="h-auto max-w-full rounded-lg"/>
 				</div>
 			))
 			}
