@@ -1,10 +1,10 @@
 ---
 import {getCollection} from 'astro:content';
-const testimonials = await getCollection('testimonials');
+const allTestimonials = await getCollection('testimonials');
 ---
 
 <div class="grid border border-base-300 shadow-sm dark:border-base-700 md:grid-cols-2">
-  {testimonials.map(testi => (
+  {allTestimonials.map(testi => (
       <figure class="flex flex-col items-center justify-center p-8 text-center bg-base-300 border-b border-base-800-200
       md:border-r dark:bg-base-800 dark:border-base-700">
         <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
