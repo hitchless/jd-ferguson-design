@@ -12,20 +12,20 @@ const {slogan, more, cta, url} = Astro.props;
 
 
 <section class="bg-center bg-no-repeat bg-tuepah lg:bg-tuepah-lg
-bg-gray-700 bg-blend-overlay">
-	<div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+bg-base-600 bg-blend-overlay">
+	<div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-44">
 
-		<h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">{slogan}</h1>
+		<h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-base-100 md:text-5xl lg:text-6xl">{slogan}</h1>
 
 		{more &&
-			<p class="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48">{more}</p>
+			<p class="mb-8 text-lg font-normal text-base-200 lg:text-xl sm:px-16 lg:px-48">{more}</p>
 		}
 
 		{cta &&
 			<div class="">
 				<a href={url}
 					 class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg
-					 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+					 bg-primary-950 hover:bg-primary-900 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
 					{cta}
 					<svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
 							 viewBox="0 0 14 10">

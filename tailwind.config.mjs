@@ -13,8 +13,8 @@ module.exports = {
 			}
 		},
 		colors: {
-			primary: colors.sky,
-			secondary: colors.emerald,
+			primary: colors.red,
+			secondary: colors.sky,
 			base: colors.slate,
 		},
 	},
