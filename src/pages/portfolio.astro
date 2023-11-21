@@ -4,10 +4,6 @@ import Hero from "../components/Hero.astro";
 import ModalGallery from "../components/ModalGallery.astro";
 import GalleryTiles from "../components/GalleryTiles.astro";
 
-import {Image} from 'astro:assets';
-const allGalleryImages = await Astro.glob('/src/images/galleries/**/*');
-const test = await Astro.glob('/src/images/galleries/test/*');
-
 import {getCollection} from 'astro:content';
 const images = await getCollection('images');
 const craftsmen = images.filter((image) =>
@@ -33,7 +29,7 @@ const french = images.filter((image) =>
 
 		<ModalGallery galleryName="craftsman" galleryTitle="Craftsmen" previous="" next="modern">
 			{craftsmen.map((img) => (
-				<img src={img.data.path} alt={img.data.credit} class="h-auto max-w-full"/>
+				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
 				<p class="bg-base-700 px-2 py-1 mb-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
@@ -41,7 +37,7 @@ const french = images.filter((image) =>
 
 		<ModalGallery galleryName="modern" galleryTitle="Modern" previous="craftsman" next="french">
 			{modern.map((img) => (
-				<img src={img.data.path} alt={img.data.credit} class="h-auto max-w-full"/>
+				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
 				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
@@ -49,7 +45,7 @@ const french = images.filter((image) =>
 
 		<ModalGallery galleryName="french" galleryTitle="French Country" previous="modern" next="">
 			{french.map((img) => (
-				<img src={img.data.path} alt={img.data.credit} class="h-auto max-w-full"/>
+				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
 				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}

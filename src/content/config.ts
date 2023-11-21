@@ -21,7 +21,7 @@ const images = defineCollection({
     style: z.string(),
     project: z.string(),
     type: z.string(),
-    path: z.string(),
+    pathToImage: z.string(),
   })
 });
 // Export a single `collections` object to register your collection(s)
