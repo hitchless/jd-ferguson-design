@@ -38,7 +38,7 @@ const french = images.filter((image) =>
 		<ModalGallery galleryName="modern" galleryTitle="Modern" previous="craftsman" next="french">
 			{modern.map((img) => (
 				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
-				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
+				<p class="bg-base-700 px-2 py-1 mb-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
@@ -46,7 +46,7 @@ const french = images.filter((image) =>
 		<ModalGallery galleryName="french" galleryTitle="French Country" previous="modern" next="">
 			{french.map((img) => (
 				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
-				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
+				<p class="bg-base-700 px-2 py-1 mb-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
