@@ -15,13 +15,13 @@ const modern = images.filter((image) =>
 const french = images.filter((image) =>
 	image.data.style.includes('French Country')
 );
-
 ---
 
 <Layout title="John Duncan Ferguson - Portfolio">
 	<main class="pt-1">
 		<Hero slogan="Portfolio" more="some of the work I've done" cta="" url="" bg="bg-hero-portfolio lg:bg-hero-portfolio-lg"/>
-		<!-- =================== -->
+
+		<!-- ======= gallery stuff, first the tiles/buttons that launch the modals, then the modals ============ -->
 
 		<div class="py-1">
 			<GalleryTiles />
@@ -51,11 +51,7 @@ const french = images.filter((image) =>
 			}
 		</ModalGallery>
 
-		<!-- =================== -->
-
-
-
-		<!-- =================== -->
+		<!-- ======== end the gallery stuff =========== -->
 
 	</main>
 </Layout>
