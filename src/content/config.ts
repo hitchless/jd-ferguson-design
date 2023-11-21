@@ -11,7 +11,21 @@ const testimonials = defineCollection({
     position: z.string(),
   })
 });
+
+const images = defineCollection({
+  type: 'content',
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    credit: z.string(),
+    style: z.string(),
+    project: z.string(),
+    type: z.string(),
+    path: z.string(),
+  })
+});
 // Export a single `collections` object to register your collection(s)
 export const collections = {
   testimonials: testimonials,
+  images: images,
 };

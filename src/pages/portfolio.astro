@@ -1,34 +1,65 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from "../components/Hero.astro";
+import ModalGallery from "../components/ModalGallery.astro";
+import GalleryTiles from "../components/GalleryTiles.astro";
 
 import {Image} from 'astro:assets';
-import Gallery from "../components/Gallery.astro";
 const allGalleryImages = await Astro.glob('/src/images/galleries/**/*');
 const test = await Astro.glob('/src/images/galleries/test/*');
+
+import {getCollection} from 'astro:content';
+const images = await getCollection('images');
+const craftsmen = images.filter((image) =>
+	image.data.style.includes('Craftsmen')
+);
+const modern = images.filter((image) =>
+	image.data.style.includes('Modern')
+);
+const french = images.filter((image) =>
+	image.data.style.includes('French Country')
+);
+
 ---
 
 <Layout title="John Duncan Ferguson - Portfolio">
 	<main class="pt-1">
-		<Hero slogan="Portfolio" more="some of the work I've done" cta="" url=""/>
+		<Hero slogan="Portfolio" more="some of the work I've done" cta="" url="" bg="bg-hero-portfolio lg:bg-hero-portfolio-lg"/>
+		<!-- =================== -->
 
-		<Gallery title="Test Gallery">
-			{test.map((img) => (
-					<div>
-						<Image src={img.default} alt="" class="h-auto max-w-full rounded-lg"	/>
-					</div>
-				))
-			}
-		</Gallery>
+		<div class="py-1">
+			<GalleryTiles />
+		</div>
 
-		<Gallery title="All Gallery Images">
-			{allGalleryImages.map((img) => (
-				<div>
-					<Image src={img.default} height="200" alt="" class="h-auto max-w-full rounded-lg"/>
-				</div>
+		<ModalGallery galleryName="craftsman" galleryTitle="Craftsmen" previous="" next="modern">
+			{craftsmen.map((img) => (
+				<img src={img.data.path} alt={img.data.credit} class="h-auto max-w-full"/>
+				<p class="bg-base-700 px-2 py-1 mb-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
-		</Gallery>
+		</ModalGallery>
+
+		<ModalGallery galleryName="modern" galleryTitle="Modern" previous="craftsman" next="french">
+			{modern.map((img) => (
+				<img src={img.data.path} alt={img.data.credit} class="h-auto max-w-full"/>
+				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
+			))
+			}
+		</ModalGallery>
+
+		<ModalGallery galleryName="french" galleryTitle="French Country" previous="modern" next="">
+			{french.map((img) => (
+				<img src={img.data.path} alt={img.data.credit} class="h-auto max-w-full"/>
+				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
+			))
+			}
+		</ModalGallery>
+
+		<!-- =================== -->
+
+
+
+		<!-- =================== -->
 
 	</main>
 </Layout>

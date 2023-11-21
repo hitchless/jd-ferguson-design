@@ -4,15 +4,14 @@ interface Props {
 	more: string;
 	cta: string;
 	url: string;
+	bg: string;
 }
 
-const {slogan, more, cta, url} = Astro.props;
+const {slogan, more, cta, url, bg} = Astro.props;
 
 ---
 
-
-<section class="bg-center bg-no-repeat bg-tuepah lg:bg-tuepah-lg
-bg-base-600 bg-blend-overlay">
+<section class:list={["bg-center", "bg-no-repeat",  "bg-base-600", "bg-blend-overlay", bg]}>
 	<div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-44">
 
 		<h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-base-100 md:text-5xl lg:text-6xl">{slogan}</h1>
