@@ -6,8 +6,8 @@ import GalleryTiles from "../components/GalleryTiles.astro";
 
 import {getCollection} from 'astro:content';
 const images = await getCollection('images');
-const craftsmen = images.filter((image) =>
-	image.data.style.includes('Craftsmen')
+const craftsman = images.filter((image) =>
+	image.data.style.includes('Craftsman')
 );
 const modern = images.filter((image) =>
 	image.data.style.includes('Modern')
@@ -28,7 +28,7 @@ const french = images.filter((image) =>
 		</div>
 
 		<ModalGallery galleryName="craftsman" galleryTitle="Craftsmen" previous="" next="modern">
-			{craftsmen.map((img) => (
+			{craftsman.map((img) => (
 				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
 				<p class="bg-base-700 px-2 py-1 mb-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
