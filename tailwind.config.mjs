@@ -12,6 +12,10 @@ module.exports = {
 				'tuepah-lg': "url('/tuepah-front-lg.jpg')",
 				'hero-portfolio': "url('/heroes/portfolio.jpg')",
 				'hero-portfolio-lg': "url('/heroes/portfolio-lg.jpg')",
+				'hero-process': "url('/heroes/process.jpg')",
+				'hero-process-lg': "url('/heroes/process-lg.jpg')",
+				'hero-bio': "url('/heroes/bio.jpg')",
+				'hero-bio-lg': "url('/heroes/bio-lg.jpg')",
 
 				'craftsman': "url('/gallery/craftsman.jpg')",
 				'modern': "url('/gallery/modern.jpg')",
