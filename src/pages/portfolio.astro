@@ -23,14 +23,14 @@ const newcombe = images.filter((image) =>
 
 		<!-- ======= gallery stuff, first the tiles/buttons that launch the modals, then the modals ============ -->
 
-		<div class="py-1">
+		<div class="">
 			<GalleryTiles />
 		</div>
 
 		<ModalGallery galleryName="wise" galleryTitle="Wise Island" previous="" next="tupah">
 			{wise.map((img) => (
 				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
-				<p class="bg-base-700 px-2 py-1 mb-1 text-base-100">photo credit: {img.data.credit}</p>
+				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
@@ -38,7 +38,7 @@ const newcombe = images.filter((image) =>
 		<ModalGallery galleryName="tupah" galleryTitle="Tupah" previous="wise" next="newcombe">
 			{tupah.map((img) => (
 				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
-				<p class="bg-base-700 px-2 py-1 mb-1 text-base-100">photo credit: {img.data.credit}</p>
+				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
@@ -46,7 +46,7 @@ const newcombe = images.filter((image) =>
 		<ModalGallery galleryName="newcombe" galleryTitle="Newcombe" previous="tupah" next="">
 			{newcombe.map((img) => (
 				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
-				<p class="bg-base-700 px-2 py-1 mb-1 text-base-100">photo credit: {img.data.credit}</p>
+				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
