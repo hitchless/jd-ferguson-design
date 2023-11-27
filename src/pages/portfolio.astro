@@ -6,14 +6,14 @@ import GalleryTiles from "../components/GalleryTiles.astro";
 
 import {getCollection} from 'astro:content';
 const images = await getCollection('images');
-const craftsman = images.filter((image) =>
-	image.data.style.includes('Craftsman')
+const wise = images.filter((image) =>
+	image.data.project.includes('Wise Island')
 );
-const modern = images.filter((image) =>
-	image.data.style.includes('Modern')
+const tupah = images.filter((image) =>
+	image.data.project.includes('Tupah')
 );
-const french = images.filter((image) =>
-	image.data.style.includes('French Country')
+const newcombe = images.filter((image) =>
+	image.data.project.includes('Newcombe')
 );
 ---
 
@@ -27,24 +27,24 @@ const french = images.filter((image) =>
 			<GalleryTiles />
 		</div>
 
-		<ModalGallery galleryName="craftsman" galleryTitle="Craftsmen" previous="" next="modern">
-			{craftsman.map((img) => (
+		<ModalGallery galleryName="wise" galleryTitle="Wise Island" previous="" next="tupah">
+			{wise.map((img) => (
 				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
 				<p class="bg-base-700 px-2 py-1 mb-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
 
-		<ModalGallery galleryName="modern" galleryTitle="Modern" previous="craftsman" next="french">
-			{modern.map((img) => (
+		<ModalGallery galleryName="tupah" galleryTitle="Tupah" previous="wise" next="newcombe">
+			{tupah.map((img) => (
 				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
 				<p class="bg-base-700 px-2 py-1 mb-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
 
-		<ModalGallery galleryName="french" galleryTitle="French Country" previous="modern" next="">
-			{french.map((img) => (
+		<ModalGallery galleryName="newcombe" galleryTitle="Newcombe" previous="tupah" next="">
+			{newcombe.map((img) => (
 				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
 				<p class="bg-base-700 px-2 py-1 mb-1 text-base-100">photo credit: {img.data.credit}</p>
 			))

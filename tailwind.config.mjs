@@ -20,6 +20,8 @@ module.exports = {
 				'craftsman': "url('/gallery/craftsman.jpg')",
 				'modern': "url('/gallery/modern.jpg')",
 				'french-country': "url('/gallery/french-country.jpg')",
+				'wise': "url('/gallery/wise-island-cover.jpg')",
+				'newcombe': "url('/gallery/newcombe-cover.jpg')",
 			}
 		},
 		colors: {
