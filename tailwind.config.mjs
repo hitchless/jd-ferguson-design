@@ -22,6 +22,7 @@ module.exports = {
 				'french-country': "url('/gallery/french-country.jpg')",
 				'wise': "url('/gallery/wise-island-cover.jpg')",
 				'newcombe': "url('/gallery/newcombe-cover.jpg')",
+				'stoik': "url('/gallery/stoik-cover.jpg')",
 			}
 		},
 		colors: {

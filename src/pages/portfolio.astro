@@ -15,6 +15,9 @@ const tupah = images.filter((image) =>
 const newcombe = images.filter((image) =>
 	image.data.project.includes('Newcombe')
 );
+const stoik = images.filter((image) =>
+	image.data.project.includes('Stoik')
+);
 ---
 
 <Layout title="John Duncan Ferguson - Portfolio">
@@ -43,8 +46,16 @@ const newcombe = images.filter((image) =>
 			}
 		</ModalGallery>
 
-		<ModalGallery galleryName="newcombe" galleryTitle="Newcombe" previous="tupah" next="">
+		<ModalGallery galleryName="newcombe" galleryTitle="Newcombe" previous="tupah" next="stoik">
 			{newcombe.map((img) => (
+				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
+				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
+			))
+			}
+		</ModalGallery>
+
+		<ModalGallery galleryName="stoik" galleryTitle="Stoik" previous="newcombe" next="">
+			{stoik.map((img) => (
 				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
 				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
