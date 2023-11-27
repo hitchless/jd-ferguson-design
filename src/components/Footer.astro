@@ -35,9 +35,8 @@ interface Props {
 			</li>
 		</ul>
 		<span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-			<span id="copyright">&copy;
-				<script is:inline>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-			</span> John Duncan Ferguson Home Design
+			&copy; <script is:inline>document.write(/\d{4}/.exec(Date())[0])</script>
+			John Duncan Ferguson Home Design
 		</span>
 	</div>
 </footer>
