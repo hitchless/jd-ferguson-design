@@ -16,6 +16,8 @@ module.exports = {
 				'hero-process-lg': "url('/heroes/process-lg.jpg')",
 				'hero-bio': "url('/heroes/bio.jpg')",
 				'hero-bio-lg': "url('/heroes/bio-lg.jpg')",
+				'hero-contact': "url('/heroes/contact.jpg')",
+				'hero-contact-lg': "url('/heroes/contact-lg.jpg')",
 
 				'craftsman': "url('/gallery/craftsman.jpg')",
 				'modern': "url('/gallery/modern.jpg')",
