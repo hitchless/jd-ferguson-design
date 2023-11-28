@@ -1,10 +1,18 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from "../components/Hero.astro";
+import Content from "../components/Content.astro";
 ---
 
 <Layout title="John Duncan Ferguson - Gratitude">
   <main class="pt-1">
-    <Hero slogan="Giving Thanks" more="life is a team effort" cta="" url="" bg="" />
+    <Hero slogan="Giving Thanks" more="life is a team effort" cta="" url="" bg="bg-hero-gratitude md:bg-hero-gratitude-lg" />
+
+    <Content>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, veritatis, voluptatibus. Commodi deleniti
+        et illum labore, laborum libero molestiae nostrum, officia placeat porro quod reiciendis sapiente temporibus,
+        voluptas voluptatem voluptates.</p>
+    </Content>
+
   </main>
 </Layout>
