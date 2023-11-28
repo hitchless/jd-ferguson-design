@@ -6,4 +6,7 @@ style: 'Craftsman'
 project: ''
 type: 'photo'
 pathToImage: '/gallery/kirz-craftsman-1.jpg'
+alt: ''
+width: '2160'
+height: ''
 ...

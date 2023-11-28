@@ -6,4 +6,7 @@ style: 'French Country'
 project: ''
 type: 'photo'
 pathToImage: '/gallery/nel-1.jpg'
+alt: ''
+width: '2160'
+height: ''
 ...

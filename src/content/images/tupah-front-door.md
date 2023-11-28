@@ -6,4 +6,7 @@ style: 'Modern'
 project: ''
 type: 'photo'
 pathToImage: '/gallery/tupah-front-door.jpg'
+alt: ''
+width: '2160'
+height: ''
 ...

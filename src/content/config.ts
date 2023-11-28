@@ -2,15 +2,6 @@
 // @ts-ignore
 import {z, defineCollection} from "astro:content"
 // Define a `type` and `schema` for each collection
-const testimonials = defineCollection({
-  type: 'content',
-  schema: z.object({
-    author: z.string(),
-    quote: z.string(),
-    callout: z.string(),
-    position: z.string(),
-  })
-});
 
 const images = defineCollection({
   type: 'content',
@@ -22,10 +13,12 @@ const images = defineCollection({
     project: z.string(),
     type: z.string(),
     pathToImage: z.string(),
+    alt: z.string(),
+    width: z.string(),
+    height: z.string(),
   })
 });
 // Export a single `collections` object to register your collection(s)
 export const collections = {
-  testimonials: testimonials,
   images: images,
 };

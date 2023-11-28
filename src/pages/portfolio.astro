@@ -1,8 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from "../components/Hero.astro";
-import ModalGallery from "../components/ModalGallery.astro";
-import GalleryTiles from "../components/GalleryTiles.astro";
+import Hero from '../components/Hero.astro';
+import ModalGallery from '../components/ModalGallery.astro';
+import GalleryTiles from '../components/GalleryTiles.astro';
+import {Image} from 'astro:assets';
 
 import {getCollection} from 'astro:content';
 const images = await getCollection('images');
@@ -32,7 +33,8 @@ const stoik = images.filter((image) =>
 
 		<ModalGallery galleryName="wise" galleryTitle="Wise Island" previous="" next="tupah">
 			{wise.map((img) => (
-				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
+				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
+							 class="h-auto max-w-full"/>
 				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
@@ -40,7 +42,8 @@ const stoik = images.filter((image) =>
 
 		<ModalGallery galleryName="tupah" galleryTitle="Tupah" previous="wise" next="newcombe">
 			{tupah.map((img) => (
-				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
+				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
+							 class="h-auto max-w-full"/>
 				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
@@ -48,7 +51,8 @@ const stoik = images.filter((image) =>
 
 		<ModalGallery galleryName="newcombe" galleryTitle="Newcombe" previous="tupah" next="stoik">
 			{newcombe.map((img) => (
-				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
+				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
+							 class="h-auto max-w-full"/>
 				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
@@ -56,7 +60,8 @@ const stoik = images.filter((image) =>
 
 		<ModalGallery galleryName="stoik" galleryTitle="Stoik" previous="newcombe" next="">
 			{stoik.map((img) => (
-				<img src={img.data.pathToImage} alt={img.data.credit} class="h-auto max-w-full"/>
+				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
+							 class="h-auto max-w-full"/>
 				<p class="bg-base-950 px-2 py-1 text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
