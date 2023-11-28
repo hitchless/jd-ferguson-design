@@ -6,7 +6,7 @@ style: 'Modern'
 project: ''
 type: 'photo'
 pathToImage: '/gallery/wr-1.jpg'
-alt: ''
-width: '2160'
-height: ''
+alt: 'WR 1'
+width: 2160
+height: 1370
 ...

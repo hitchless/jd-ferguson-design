@@ -7,6 +7,6 @@ project: 'Tupah'
 type: 'photo'
 pathToImage: '/gallery/tupah-1.jpg'
 alt: 'Tupah 1'
-width: '2160'
-height: '1434'
+width: 2160
+height: 1434
 ...

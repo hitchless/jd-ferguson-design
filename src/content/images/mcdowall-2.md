@@ -6,7 +6,7 @@ style: 'French Country'
 project: ''
 type: 'photo'
 pathToImage: '/gallery/mcdowall-2.jpg'
-alt: ''
-width: '2160'
-height: ''
+alt: 'McDowall 2'
+width: 2160
+height: 1405
 ...

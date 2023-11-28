@@ -7,6 +7,6 @@ project: 'Stoik'
 type: 'photo'
 pathToImage: '/gallery/stoik-1.jpg'
 alt: 'Stoik 1'
-width: '2160'
-height: '1393'
+width: 2160
+height: 1393
 ...

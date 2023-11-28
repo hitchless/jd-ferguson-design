@@ -1,12 +1,12 @@
 ---
-title: 'Kirz Craftsman 2'
+title: 'Kirzinger 2'
 description: ''
 credit: 'Place Holder'
 style: 'Craftsman'
 project: ''
 type: 'photo'
 pathToImage: '/gallery/kirz-craftsman-2.jpg'
-alt: ''
-width: '2160'
-height: ''
+alt: 'Kirzinger 2'
+width: 2160
+height: 1757
 ...

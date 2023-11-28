@@ -14,8 +14,8 @@ const images = defineCollection({
     type: z.string(),
     pathToImage: z.string(),
     alt: z.string(),
-    width: z.string(),
-    height: z.string(),
+    width: z.number(),
+    height: z.number(),
   })
 });
 // Export a single `collections` object to register your collection(s)
