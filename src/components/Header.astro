@@ -5,7 +5,7 @@ interface Props {
 
 ---
 
-<nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+<nav class="bg-base-50 dark:bg-gray-900 fixed w-full z-20 top-0 start-0">
 	<div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
 		<!-- left side of header -->
@@ -23,18 +23,18 @@ interface Props {
 			<!-- contact button -->
 			<a href="/contact">
 				<button type="button"
-								class="text-white bg-primary-950 hover:bg-primary-900 font-medium text-sm px-4 py-2
+								class="text-white bg-primary-950 hover:bg-primary-900 text-sm font-light px-4 py-2
 								text-center">
 					Contact
 				</button>
 			</a>
 			<!-- veggie burger icon on small screens -->
 			<button data-collapse-toggle="navbar-sticky" type="button"
-							class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden"
+							class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-base-500 rounded-lg lg:hidden"
 							aria-controls="navbar-sticky" aria-expanded="false">
 				<span class="sr-only">Open main menu</span>
 				<svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+					<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
 								d="M1 1h15M1 7h15M1 13h15"/>
 				</svg>
 			</button>
@@ -42,23 +42,23 @@ interface Props {
 
 		<!-- menu items -->
 		<div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
-			<ul	class="flex flex-col p-4 lg:p-0 mt-4 font-medium lg:space-x-8	rtl:space-x-reverse lg:flex-row lg:mt-0
-				lg:border-0 lg:bg-white">
+			<ul	class="flex flex-col p-2 lg:p-0 mt-4 text-base-950 font-medium text-right lg:space-x-8 rtl:space-x-reverse lg:flex-row
+			    lg:mt-0	lg:border-0 lg:bg-white">
 				<li>
 					<a href="/"
-						 class="block py-2 px-3 text-base-900 rounded md:bg-transparent md:p-0 md:dark:text-base-100">Home</a>
+						 class="block hover:text-primary-900 font-light md:bg-transparent md:p-0 md:dark:text-base-100">Home</a>
 				</li>
 				<li>
 					<a href="/bio"
-						 class="block py-2 px-3 text-base-900 rounded md:bg-transparent md:p-0 md:dark:text-base-100">Bio</a>
+						 class="block hover:text-primary-900 font-light md:bg-transparent md:p-0 md:dark:text-base-100">Bio</a>
 				</li>
 				<li>
 					<a href="/portfolio"
-						 class="block py-2 px-3 text-base-900 rounded md:bg-transparent md:p-0 md:dark:text-base-100">Portfolio</a>
+						 class="block hover:text-primary-900 font-light md:bg-transparent md:p-0 md:dark:text-base-100">Portfolio</a>
 				</li>
 				<li>
 					<a href="/process"
-						 class="block py-2 px-3 text-base-900 rounded md:bg-transparent md:p-0 md:dark:text-base-100">Process</a>
+						 class="block hover:text-primary-900 font-light md:bg-transparent md:p-0 md:dark:text-base-100">Process</a>
 				</li>
 				<!--
 				<li>
@@ -68,7 +68,7 @@ interface Props {
 				-->
 				<li>
 					<a href="/gratitude"
-						 class="block py-2 px-3 text-base-900 rounded md:bg-transparent md:p-0 md:dark:text-base-100">Gratitude</a>
+						 class="block hover:text-primary-900 font-light md:bg-transparent md:p-0 md:dark:text-base-100">Gratitude</a>
 				</li>
 			</ul>
 		</div>

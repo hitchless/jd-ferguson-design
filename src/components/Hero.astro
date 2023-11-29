@@ -14,16 +14,16 @@ const {slogan, more, cta, url, bg} = Astro.props;
 <section class:list={["bg-cover", "bg-no-repeat",  "bg-base-600", "bg-blend-overlay", bg]}>
 	<div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-44">
 
-		<h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-base-100 md:text-5xl lg:text-6xl">{slogan}</h1>
+		<h1 class="mb-4 text-5xl font-extralight drop-shadow tracking-tight leading-none text-base-100 md:text-5xl lg:text-6xl">{slogan}</h1>
 
 		{more &&
-			<p class="mb-8 text-lg font-normal text-base-200 lg:text-xl sm:px-16 lg:px-48">{more}</p>
+			<p class="mb-8 text-lg font-light drop-shadow text-base-200 lg:text-xl sm:px-16 lg:px-48">{more}</p>
 		}
 
 		{cta &&
 			<div class="">
 				<a href={url}
-					 class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-base-100
+					 class="inline-flex justify-center items-center py-3 px-5 text-base font-light text-center text-base-100
 					 bg-primary-950 hover:bg-primary-900">
 					{cta}
 					<svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
