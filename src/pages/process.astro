@@ -1,4 +1,5 @@
 ---
+import LI from '../components/html/LI.astro';
 import Layout from '../layouts/Layout.astro';
 import Hero from "../components/Hero.astro";
 import Content from "../components/Content.astro";
@@ -10,26 +11,23 @@ import Content from "../components/Content.astro";
           bg="bg-hero-process md:bg-hero-process-lg" />
 
     <Content>
-      <p class="leading-snug tracking-tight">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, veritatis, voluptatibus. Commodi deleniti
-        et illum labore, laborum libero molestiae nostrum, officia placeat porro quod reiciendis sapiente temporibus,
-        voluptas voluptatem voluptates.</p>
       <ol class="list-decimal p-6 pb-0 text-2xl font-thin">
-        <li>Meet the clients and visit the site. This can be done by Zoom (or anything similar, online) if they are from
-          out of the area. At this point I will have researched zoning and bylaw information.</li>
-        <li>Gather as much information as I can from the clients, including:
-          <ul class="">
+        <LI>Meet the clients and visit the site. This can be done by Zoom (or anything similar, online) if they are from
+          out of the area. At this point I will have researched zoning and bylaw information.</LI>
+        <LI>Gather as much information as I can from the clients, including:
+          <ul class="list-disc">
             <li>wish list</li>
             <li>photos</li>
             <li>magazine or digital images</li>
             <li>existing furnature and art they want to use in their home</li>
           </ul>
-        </li>
-        <li>Do sections of the house site based on topographic information.</li>
-        <li>Start sketching ideas based on the wishlist, keeping in mind sunlight, wind direction, and topography.</li>
-        <li>Generic and existing furniture are included in this stage.</li>
-        <li>Thumbnail sketches and plans are then presented to the client.</li>
-        <li>Using AutoCAD, these ideas then get scaled into two or more alternative plans.</li>
-        <li>I encourage clients to hire a professional interior designer at this point in the design.</li>
+        </LI>
+        <LI>Do sections of the house site based on topographic information.</LI>
+        <LI>Start sketching ideas based on the wishlist, keeping in mind sunlight, wind direction, and topography.</LI>
+        <LI>Generic and existing furniture are included in this stage.</LI>
+        <LI>Thumbnail sketches and plans are then presented to the client.</LI>
+        <LI>Using AutoCAD, these ideas then get scaled into two or more alternative plans.</LI>
+        <LI>I encourage clients to hire a professional interior designer at this point in the design.</LI>
       </ol>
     </Content>
 
