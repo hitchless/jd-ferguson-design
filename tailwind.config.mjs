@@ -25,6 +25,7 @@ module.exports = {
 				'modern': "url('/gallery/modern.jpg')",
 				'french-country': "url('/gallery/french-country.jpg')",
 				'poppy': "url('/gallery/poppy/poppy-cover.jpg')",
+				'forillo': "url('/gallery/forillo/forillo-cover.jpg')",
 				'wise': "url('/gallery/wise-island-cover.jpg')",
 				'newcombe': "url('/gallery/newcombe-cover.jpg')",
 				'stoik': "url('/gallery/stoik-cover.jpg')",

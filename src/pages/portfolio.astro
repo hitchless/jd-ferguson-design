@@ -10,6 +10,9 @@ const images = await getCollection('images');
 const poppy = images.filter((image) =>
 	image.data.project.includes('Poppy')
 );
+const forillo = images.filter((image) =>
+	image.data.project.includes('Forillo')
+);
 const wise = images.filter((image) =>
 	image.data.project.includes('Wise Island')
 );
@@ -34,7 +37,7 @@ const stoik = images.filter((image) =>
 			<GalleryTiles />
 		</div>
 
-		<ModalGallery galleryName="poppy" galleryTitle="Poppy" previous="" next="wise">
+		<ModalGallery galleryName="poppy" galleryTitle="Poppy" previous="stoik" next="forillo">
 			{poppy.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
@@ -43,7 +46,16 @@ const stoik = images.filter((image) =>
 			}
 		</ModalGallery>
 
-		<ModalGallery galleryName="wise" galleryTitle="Wise Island" previous="poppy" next="tupah">
+		<ModalGallery galleryName="forillo" galleryTitle="Forillo" previous="poppy" next="wise">
+			{forillo.map((img) => (
+				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
+							 class="h-auto max-w-full"/>
+				<p class="bg-base-950 px-2 py-1 font-light text-base-100">photo credit: {img.data.credit}</p>
+			))
+			}
+		</ModalGallery>
+
+		<ModalGallery galleryName="wise" galleryTitle="Wise Island" previous="forillo" next="tupah">
 			{wise.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
@@ -70,7 +82,7 @@ const stoik = images.filter((image) =>
 			}
 		</ModalGallery>
 
-		<ModalGallery galleryName="stoik" galleryTitle="Stoik" previous="newcombe" next="">
+		<ModalGallery galleryName="stoik" galleryTitle="Stoik" previous="newcombe" next="poppy">
 			{stoik.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
