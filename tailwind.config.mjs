@@ -29,6 +29,7 @@ module.exports = {
 				'wise': "url('/gallery/wise-island-cover.jpg')",
 				'newcombe': "url('/gallery/newcombe-cover.jpg')",
 				'stoik': "url('/gallery/stoik-cover.jpg')",
+				'kirzinger': "url('/gallery/kirzinger-cover.jpg')",
 			}
 		},
 		colors: {

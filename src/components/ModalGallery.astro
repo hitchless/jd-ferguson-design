@@ -1,12 +1,32 @@
 ---
+import LI from "./html/LI.astro";
 interface Props {
   galleryName: string;
 	galleryTitle: string;
+	owner: string;
+	builder: string;
+	builderURL: string;
+	designer: string;
+	designerURL: string;
+	photographer: string;
+	photographerURL: string;
 	next: string;
 	previous:string;
 }
 
-const { galleryName, galleryTitle, previous, next } = Astro.props;
+const {
+	galleryName,
+	galleryTitle,
+	owner,
+	builder,
+	builderURL,
+	designer,
+	designerURL,
+	photographer,
+	photographerURL,
+	previous,
+	next
+} = Astro.props;
 
 ---
 
@@ -33,6 +53,20 @@ const { galleryName, galleryTitle, previous, next } = Astro.props;
 				</button>
 				<h3 class="text-4xl font-thin text-gray-900 dark:text-white">{galleryTitle}</h3>
 			</div>
+			<ul class="p-5">
+				{owner &&
+					<LI><b class="font-bold">Owner</b>: {owner}</LI>
+				}
+				{builder &&
+					<LI><b class="font-bold">Builder: </b><a class="text-primary-800 underline" href={builderURL}>{builder}</a></LI>
+				}
+				{designer &&
+					<LI><b class="font-bold">Designer: </b><a href={designerURL}>{designer}</a></LI>
+				}
+				{photographer &&
+					<LI><b class="font-bold">Photographer: </b><a href={photographerURL}>{photographer}</a></LI>
+				}
+			</ul>
 
 			<!-- Modal body -->
 

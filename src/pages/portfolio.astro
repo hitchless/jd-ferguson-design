@@ -22,8 +22,8 @@ const tupah = images.filter((image) =>
 const newcombe = images.filter((image) =>
 	image.data.project.includes('Newcombe')
 );
-const stoik = images.filter((image) =>
-	image.data.project.includes('Stoik')
+const kirzinger = images.filter((image) =>
+	image.data.project.includes('Kirzinger')
 );
 ---
 
@@ -37,56 +37,86 @@ const stoik = images.filter((image) =>
 			<GalleryTiles />
 		</div>
 
-		<ModalGallery galleryName="poppy" galleryTitle="Poppy" previous="stoik" next="forillo">
+		<ModalGallery
+			galleryName="poppy"
+			galleryTitle="Poppy"
+			owner="Owen Poppy"
+			builder="Surfside Construction"
+			builderURL="http://www.surfsideconstruction.ca"
+			designer="Ivana Maschi"
+			designerURL=""
+			photographer="Owen Beck"
+			photorgrapherURL=""
+			previous="kirzinger"
+			next="forillo"
+		>
 			{poppy.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
-				<p class="bg-base-950 px-2 py-1 font-light text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
-
+		<!-- *************** -->
 		<ModalGallery galleryName="forillo" galleryTitle="Forillo" previous="poppy" next="wise">
 			{forillo.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
-				<p class="bg-base-950 px-2 py-1 font-light text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
-
+		<!-- *************** -->
 		<ModalGallery galleryName="wise" galleryTitle="Wise Island" previous="forillo" next="tupah">
 			{wise.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
-				<p class="bg-base-950 px-2 py-1 font-light text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
-
-		<ModalGallery galleryName="tupah" galleryTitle="Tupah" previous="wise" next="newcombe">
+		<!-- *************** -->
+		<ModalGallery
+			galleryName="tupah"
+			galleryTitle="Tupah"
+			owner=""
+			builder="Surfside Construction"
+			builderURL="http://www.surfsideconstruction.ca"
+			designer="Ivana Maschi"
+			designerURL=""
+			photographer=""
+			photorgrapherURL=""
+			previous="wise"
+			next="newcombe"
+		>
 			{tupah.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
-				<p class="bg-base-950 px-2 py-1 font-light text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
-
-		<ModalGallery galleryName="newcombe" galleryTitle="Newcombe" previous="tupah" next="stoik">
+		<!-- *************** -->
+		<ModalGallery galleryName="newcombe" galleryTitle="Newcombe" previous="tupah" next="kirzinger">
 			{newcombe.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
-				<p class="bg-base-950 px-2 py-1 font-light text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
-
-		<ModalGallery galleryName="stoik" galleryTitle="Stoik" previous="newcombe" next="poppy">
-			{stoik.map((img) => (
+		<!-- *************** -->
+		<ModalGallery
+			galleryName="kirzinger"
+			galleryTitle="Kirzinger"
+			owner=""
+			builder=""
+			builderURL=""
+			designer=""
+			designerURL=""
+			photographer="Mike Kondra"
+			photorgrapherURL=""
+			previous="newcombe"
+			next="poppy"
+		>
+			{kirzinger.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
-				<p class="bg-base-950 px-2 py-1 font-light text-base-100">photo credit: {img.data.credit}</p>
 			))
 			}
 		</ModalGallery>
