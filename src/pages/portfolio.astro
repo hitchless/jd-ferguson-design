@@ -37,17 +37,7 @@ const kirzinger = images.filter((image) =>
 			<GalleryTiles />
 		</div>
 
-		<ModalGallery
-			galleryName="poppy"
-			galleryTitle="Poppy"
-			owner="Owen Poppy"
-			builder="Surfside Construction"
-			builderURL="http://www.surfsideconstruction.ca"
-			designer="Ivana Maschi"
-			photographer="Owen Beck"
-			previous="kirzinger"
-			next="forillo"
-		>
+		<ModalGallery	galleryName="poppy"	galleryTitle="Poppy" owner="Owen Poppy"	builder="Surfside Construction"	builderURL="http://www.surfsideconstruction.ca"	designer="Ivana Maschi"	photographer="Owen Beck" previous="kirzinger"	next="forillo">
 			{poppy.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
