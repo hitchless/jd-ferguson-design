@@ -56,8 +56,20 @@ const kirzinger = images.filter((image) =>
 			))
 			}
 		</ModalGallery>
-		<!--
-		<ModalGallery galleryName="forillo" galleryTitle="Forillo" previous="poppy" next="wise">
+
+		<ModalGallery
+			galleryName="forillo"
+			galleryTitle="Forillo"
+			owner=""
+			builder=""
+			builderURL=""
+			designer=""
+			designerURL=""
+			photographer=""
+			photographerURL=""
+			previous="poppy"
+			next="wise"
+		>
 			{forillo.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
@@ -65,7 +77,19 @@ const kirzinger = images.filter((image) =>
 			}
 		</ModalGallery>
 
-		<ModalGallery galleryName="wise" galleryTitle="Wise Island" previous="forillo" next="tupah">
+		<ModalGallery
+			galleryName="wise"
+			galleryTitle="Wise Island"
+			owner=""
+			builder=""
+			builderURL=""
+			designer=""
+			designerURL=""
+			photographer=""
+			photographerURL=""
+			previous="forillo"
+			next="tupah"
+		>
 			{wise.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
@@ -76,9 +100,13 @@ const kirzinger = images.filter((image) =>
 		<ModalGallery
 			galleryName="tupah"
 			galleryTitle="Tupah"
+			owner=""
 			builder="Surfside Construction"
 			builderURL="http://www.surfsideconstruction.ca"
 			designer="Ivana Maschi"
+			designerURL=""
+			photographer=""
+			photographerURL=""
 			previous="wise"
 			next="newcombe"
 		>
@@ -89,14 +117,25 @@ const kirzinger = images.filter((image) =>
 			}
 		</ModalGallery>
 
-		<ModalGallery galleryName="newcombe" galleryTitle="Newcombe" previous="tupah" next="kirzinger">
+		<ModalGallery
+			galleryName="newcombe"
+			galleryTitle="Newcombe"
+			owner=""
+			builder=""
+			builderURL=""
+			designer=""
+			designerURL=""
+			photographer=""
+			photographerURL=""
+			previous="tupah"
+			next="kirzinger"
+		>
 			{newcombe.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
 			))
 			}
 		</ModalGallery>
-		-->
 
 		<ModalGallery
 			galleryName="kirzinger"

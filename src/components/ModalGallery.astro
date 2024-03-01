@@ -55,16 +55,27 @@ const {
 			</div>
 			<ul class="p-5">
 				{owner &&
-					<LI><b class="font-bold">Owner: </b>{owner}</LI>
+					<LI>
+						<b class="font-bold">Owner: </b>{owner}
+					</LI>
 				}
 				{builder &&
-					<LI><b class="font-bold">Builder: </b><a class="text-primary-800 underline" href={builderURL}>{builder}</a></LI>
+					<LI>
+						<b class="font-bold">Builder: </b>
+						{builderURL ? <a class="text-primary-800 underline" href={builderURL}>{builder}</a> : builder}
+					</LI>
 				}
 				{designer &&
-					<LI><b class="font-bold">Designer: </b><a href={designerURL}>{designer}</a></LI>
+					<LI>
+						<b class="font-bold">Designer: </b>
+						{designerURL ? <a class="text-primary-800 underline" href={designerURL}>{designer}</a> : designer}
+					</LI>
 				}
 				{photographer &&
-					<LI><b class="font-bold">Photographer: </b><a href={photographerURL}>{photographer}</a></LI>
+					<LI>
+						<b class="font-bold">Photographer: </b>
+						{photographerURL ? <a class="text-primary-800 underline" href={photographerURL}>{photographer}</a> : photographer}
+					</LI>
 				}
 			</ul>
 
