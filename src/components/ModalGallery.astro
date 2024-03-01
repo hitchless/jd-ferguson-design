@@ -3,13 +3,15 @@ import LI from "./html/LI.astro";
 interface Props {
   galleryName: string;
 	galleryTitle: string;
+	principalDesigner: string;
 	owner: string;
 	builder: string;
 	builderURL: string;
-	designer: string;
-	designerURL: string;
+	interiorDesigner: string;
+	interiorDesignerURL: string;
 	photographer: string;
 	photographerURL: string;
+	draftsman: string;
 	next: string;
 	previous:string;
 }
@@ -17,13 +19,15 @@ interface Props {
 const {
 	galleryName,
 	galleryTitle,
+	principalDesigner,
 	owner,
 	builder,
 	builderURL,
-	designer,
-	designerURL,
+	interiorDesigner,
+	interiorDesignerURL,
 	photographer,
 	photographerURL,
+	draftsman,
 	previous,
 	next
 } = Astro.props;
@@ -53,7 +57,20 @@ const {
 				</button>
 				<h3 class="text-4xl font-thin text-gray-900 dark:text-white">{galleryTitle}</h3>
 			</div>
+
+			<!-- Modal body -->
+
+			<slot />
+
+			<!-- Modal footer -->
+
 			<ul class="p-5">
+
+				{principalDesigner &&
+					<LI>
+						<b class="font-bold">Principal Designer: </b>{principalDesigner}
+					</LI>
+				}
 				{owner &&
 					<LI>
 						<b class="font-bold">Owner: </b>{owner}
@@ -65,25 +82,25 @@ const {
 						{builderURL ? <a class="text-primary-800 underline" href={builderURL}>{builder}</a> : builder}
 					</LI>
 				}
-				{designer &&
+				{interiorDesigner &&
 					<LI>
-						<b class="font-bold">Designer: </b>
-						{designerURL ? <a class="text-primary-800 underline" href={designerURL}>{designer}</a> : designer}
+						<b class="font-bold">Interior Designer: </b>
+						{interiorDesignerURL ? <a class="text-primary-800 underline" href={interiorDesignerURL}>{interiorDesigner}</a> : interiorDesigner}
+					</LI>
+				}
+				{draftsman &&
+					<LI>
+						<b class="font-bold">3D Draftsman: </b>{draftsman}
 					</LI>
 				}
 				{photographer &&
 					<LI>
 						<b class="font-bold">Photographer: </b>
-						{photographerURL ? <a class="text-primary-800 underline" href={photographerURL}>{photographer}</a> : photographer}
+						{photographerURL ?
+							<a class="text-primary-800 underline" href={photographerURL}>{photographer}</a> : photographer}
 					</LI>
 				}
 			</ul>
-
-			<!-- Modal body -->
-
-			<slot />
-
-			<!-- Modal footer -->
 
 			<div class="flex items-center p-4 md:p-5">
 

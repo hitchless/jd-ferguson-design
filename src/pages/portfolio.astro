@@ -10,7 +10,7 @@ const images = await getCollection('images');
 const poppy = images.filter((image) =>
 	image.data.project.includes('Poppy')
 );
-const forillo = images.filter((image) =>
+const fiorillo = images.filter((image) =>
 	image.data.project.includes('Forillo')
 );
 const wise = images.filter((image) =>
@@ -40,15 +40,17 @@ const kirzinger = images.filter((image) =>
 		<ModalGallery
 			galleryName="poppy"
 			galleryTitle="Poppy"
+			principalDesigner="Jack Ferguson"
 			owner="Owen Poppy"
 			builder="Surfside Construction"
 			builderURL="http://www.surfsideconstruction.ca"
-			designer="Ivana Maschi"
-			designerURL=""
-			photographer="Owen Beck"
+			interiorDesigner="Ivana Maschi"
+			interiorDesignerURL=""
+			photographer="Jody Beck"
 			photographerURL=""
+			draftsman=""
 			previous="kirzinger"
-			next="forillo"
+			next="fiorillo"
 		>
 			{poppy.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
@@ -58,19 +60,21 @@ const kirzinger = images.filter((image) =>
 		</ModalGallery>
 
 		<ModalGallery
-			galleryName="forillo"
-			galleryTitle="Forillo"
+			galleryName="fiorillo"
+			galleryTitle="Fiorillo"
+			principalDesigner="Jack Ferguson"
 			owner=""
 			builder=""
 			builderURL=""
-			designer=""
-			designerURL=""
-			photographer=""
+			interiorDesigner=""
+			interiorDesignerURL=""
+			photographer="Jody Beck"
 			photographerURL=""
+			draftsman="Adrian Schamberger"
 			previous="poppy"
 			next="wise"
 		>
-			{forillo.map((img) => (
+			{fiorillo.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
 							 class="h-auto max-w-full"/>
 			))
@@ -80,14 +84,16 @@ const kirzinger = images.filter((image) =>
 		<ModalGallery
 			galleryName="wise"
 			galleryTitle="Wise Island"
+			principalDesigner="Jack Ferguson"
 			owner=""
 			builder=""
 			builderURL=""
-			designer=""
-			designerURL=""
+			interiorDesigner=""
+			interiorDesignerURL=""
 			photographer=""
 			photographerURL=""
-			previous="forillo"
+			draftsman=""
+			previous="fiorillo"
 			next="tupah"
 		>
 			{wise.map((img) => (
@@ -100,13 +106,15 @@ const kirzinger = images.filter((image) =>
 		<ModalGallery
 			galleryName="tupah"
 			galleryTitle="Tupah"
+			principalDesigner="Jack Ferguson"
 			owner=""
 			builder="Surfside Construction"
 			builderURL="http://www.surfsideconstruction.ca"
-			designer="Ivana Maschi"
-			designerURL=""
+			interiorDesigner="Ivana Maschi"
+			interiorDesignerURL=""
 			photographer=""
 			photographerURL=""
+			draftsman=""
 			previous="wise"
 			next="newcombe"
 		>
@@ -120,13 +128,15 @@ const kirzinger = images.filter((image) =>
 		<ModalGallery
 			galleryName="newcombe"
 			galleryTitle="Newcombe"
+			principalDesigner="Jack Ferguson"
 			owner=""
 			builder=""
 			builderURL=""
-			designer=""
-			designerURL=""
+			interiorDesigner=""
+			interiorDesignerURL=""
 			photographer=""
 			photographerURL=""
+			draftsman=""
 			previous="tupah"
 			next="kirzinger"
 		>
@@ -140,13 +150,15 @@ const kirzinger = images.filter((image) =>
 		<ModalGallery
 			galleryName="kirzinger"
 			galleryTitle="Kirzinger"
+			principalDesigner="Jack Ferguson"
 			owner=""
 			builder=""
 			builderURL=""
-			designer=""
-			designerURL=""
+			interiorDesigner=""
+			interiorDesignerURL=""
 			photographer="Mike Kondra"
 			photographerURL=""
+			draftsman=""
 			previous="newcombe"
 			next="poppy"
 		>
