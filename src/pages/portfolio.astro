@@ -39,7 +39,7 @@ const kirzinger = images.filter((image) =>
 
 		<ModalGallery
 			galleryName="poppy"
-			galleryTitle="Poppy"
+			galleryTitle="Southern Cross North"
 			principalDesigner="Jack Ferguson"
 			owner="Owen Poppy"
 			builder="Surfside Construction"
@@ -51,6 +51,8 @@ const kirzinger = images.filter((image) =>
 			draftsman=""
 			previous="kirzinger"
 			next="fiorillo"
+			previousText="Ocean Park House"
+			nextText="The Shirley House"
 		>
 			{poppy.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
@@ -61,7 +63,7 @@ const kirzinger = images.filter((image) =>
 
 		<ModalGallery
 			galleryName="fiorillo"
-			galleryTitle="Fiorillo"
+			galleryTitle="The Shirley House"
 			principalDesigner="Jack Ferguson"
 			owner=""
 			builder=""
@@ -73,6 +75,8 @@ const kirzinger = images.filter((image) =>
 			draftsman="Adrian Schamberger"
 			previous="poppy"
 			next="wise"
+			previousText="Southern Cross North"
+			nextText="Wise Island"
 		>
 			{fiorillo.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
@@ -95,6 +99,8 @@ const kirzinger = images.filter((image) =>
 			draftsman=""
 			previous="fiorillo"
 			next="tupah"
+			previousText="The Shirley House"
+			nextText="Elgin Creek"
 		>
 			{wise.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
@@ -105,7 +111,7 @@ const kirzinger = images.filter((image) =>
 
 		<ModalGallery
 			galleryName="tupah"
-			galleryTitle="Tupah"
+			galleryTitle="Elgin Creek"
 			principalDesigner="Jack Ferguson"
 			owner=""
 			builder="Surfside Construction"
@@ -117,6 +123,8 @@ const kirzinger = images.filter((image) =>
 			draftsman=""
 			previous="wise"
 			next="newcombe"
+			previousText="Wise Island"
+			nextText="Maison de Lumiére"
 		>
 			{tupah.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
@@ -127,7 +135,7 @@ const kirzinger = images.filter((image) =>
 
 		<ModalGallery
 			galleryName="newcombe"
-			galleryTitle="Newcombe"
+			galleryTitle="Maison de Lumiére"
 			principalDesigner="Jack Ferguson"
 			owner=""
 			builder=""
@@ -139,6 +147,8 @@ const kirzinger = images.filter((image) =>
 			draftsman=""
 			previous="tupah"
 			next="kirzinger"
+			previousText="Elgin Creek"
+			nextText="Ocean Park House"
 		>
 			{newcombe.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}
@@ -149,7 +159,7 @@ const kirzinger = images.filter((image) =>
 
 		<ModalGallery
 			galleryName="kirzinger"
-			galleryTitle="Kirzinger"
+			galleryTitle="Ocean Park House"
 			principalDesigner="Jack Ferguson"
 			owner=""
 			builder=""
@@ -161,6 +171,8 @@ const kirzinger = images.filter((image) =>
 			draftsman=""
 			previous="newcombe"
 			next="poppy"
+			previousText="Maison de Lumiére"
+			nextText="Southern Cross North"
 		>
 			{kirzinger.map((img) => (
 				<Image src={img.data.pathToImage} alt={img.data.credit} width={img.data.width} height={img.data.height}

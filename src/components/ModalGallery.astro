@@ -14,6 +14,8 @@ interface Props {
 	draftsman: string;
 	next: string;
 	previous:string;
+	nextText: string;
+	previousText: string;
 }
 
 const {
@@ -29,7 +31,9 @@ const {
 	photographerURL,
 	draftsman,
 	previous,
-	next
+	next,
+	nextText,
+	previousText
 } = Astro.props;
 
 ---
@@ -109,7 +113,7 @@ const {
 						<button data-modal-hide={galleryName} data-modal-target={previous} data-modal-show={previous} type="button"
 										class="text-base-50 bg-primary-900 hover:bg-primary-950 font-medium text-sm px-5
 										py-2.5 text-center capitalize">
-							&larr; {previous}
+							&larr; {previousText}
 						</button>
 					}
 				</div>
@@ -119,7 +123,7 @@ const {
 						<button data-modal-hide={galleryName} data-modal-target={next} data-modal-show={next} type="button"
 										class="text-base-50 bg-primary-900 hover:bg-primary-950 font-medium text-sm px-5
 										py-2.5 text-center capitalize">
-							{next} &rarr;
+							{nextText} &rarr;
 						</button>
 					}
 				</div>
