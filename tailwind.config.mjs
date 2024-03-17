@@ -8,6 +8,7 @@ module.exports = {
 	theme: {
 		extend: {
 			backgroundImage: {
+				'signature': "url('/signature.png')",
 				'tuepah': "url('/tuepah-front.jpg')",
 				'tuepah-lg': "url('/tuepah-front-lg.jpg')",
 				'hero-portfolio': "url('/heroes/portfolio.jpg')",
