@@ -1,4 +1,5 @@
 ---
+import P from '../components/html/P.astro';
 import LI from '../components/html/LI.astro';
 import Layout from '../layouts/Layout.astro';
 import Hero from "../components/Hero.astro";
@@ -11,37 +12,34 @@ import Content from "../components/Content.astro";
           bg="bg-hero-process md:bg-hero-process-lg" />
 
     <Content>
-      <ol class="list-decimal p-6 pb-0 text-2xl font-thin">
-        <LI>Meet the clients and visit the site. This can be done by Zoom (or anything similar, online) if they are from
-          out of the area. At this point I will have researched zoning and bylaw information.</LI>
-        <LI>Gather as much information as I can from the clients, including:
-          <ul class="list-disc pl-4 pt-2">
-            <li>wish list</li>
-            <li>photos</li>
-            <li>magazine or digital images</li>
-            <li>existing furniture and art they want to use in their home</li>
-          </ul>
-        </LI>
-        <LI>Do sections of the house site based on topographic information.</LI>
-        <LI>Start sketching ideas based on the wishlist, keeping in mind sunlight, wind direction, and topography.</LI>
-        <LI>Generic and existing furniture are included in this stage.</LI>
-        <LI>Thumbnail sketches and plans are then presented to the client.</LI>
-        <LI>Using AutoCAD, these ideas then get scaled into two or more alternative plans.</LI>
-        <LI>I encourage clients to hire a professional interior designer at this point in the design.</LI>
-        <LI>Preliminary Plans, including:
-          <ul class="list-disc pl-4 pt-2">
-            <li>tightening up floor plans</li>
-            <li>a roof plan</li>
-            <li>more sections</li>
-            <li>at least two scaled elevations</li>
-            <li>site plan with lot grading</li>
-            <li>as many meetings as necessary throughout this stage is very important</li>
-            <li>potentially a model or 3D rendering, depending on the complexity of the project</li>
-            <li>if there are any rezoning or development permits I will generally get them started about halfway through
-              the preliminary stage</li>
-          </ul>
-        </LI>
+      <P>The program for a home starts with the client's "wish list", size and style of of home they want, number of
+        bedrooms, etc.</P>
+      <P>Then:</P>
+
+      <ol class="list-decimal p-6 text-xl font-thin ">
+        <LI>gather zoning information and visit the site</LI>
+        <LI>sections of the homes location</LI>
+        <LI>sketch ideas and present two or three alternatives</LI>
+        <LI>preliminary plans</LI>
+        <LI>interior design</LI>
+        <LI>working drawings</LI>
       </ol>
+
+      <P>A lot of work goes into the preliminary design stage. The is where the plan is really solidified. I will often
+      start correspondence with a professional engineer during the preliminaries.</P>
+
+      <P>Also at the prelim stage interior design is very important. This incorporates a furniture plan and any artwork the
+      client would like to display. I encourage clients to hire a professional interior designer, and possibly become
+      part of the team throughout the build.</P>
+
+      <P>The last step is preparing construction ready working drawings. This is a very intense stage for the draftsman and
+      principle designer as it involves final engineering, correspondence with the builder, roof truss company, and the
+      window supplier, etc.</P>
+
+      <P>All the requirements for the building permits are also included in this final stage.</P>
+
+      <P>My last words of advice are: get a tight budget done before starting the build, and have fun with the process of
+      building your dream home.</P>
     </Content>
 
   </main>
