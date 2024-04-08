@@ -7,24 +7,23 @@ import {Image} from 'astro:assets';
 
 import {getCollection} from 'astro:content';
 const images = await getCollection('images');
-const poppy = images.filter((image) =>
-	image.data.project.includes('Poppy')
-);
-const fiorillo = images.filter((image) =>
-	image.data.project.includes('Forillo')
-);
-const wise = images.filter((image) =>
-	image.data.project.includes('Wise Island')
-);
-const tupah = images.filter((image) =>
-	image.data.project.includes('Tupah')
-);
-const newcombe = images.filter((image) =>
-	image.data.project.includes('Newcombe')
-);
-const kirzinger = images.filter((image) =>
-	image.data.project.includes('Kirzinger')
-);
+
+function getSortedImagesByProject(projectName) {
+	return images
+		.filter((image) => image.data.project.includes(projectName))
+		.sort((a, b) => {
+			const aPriority = a.data.priority !== null && a.data.priority !== undefined ? a.data.priority.valueOf() : Number.MAX_SAFE_INTEGER;
+			const bPriority = b.data.priority !== null && b.data.priority !== undefined ? b.data.priority.valueOf() : Number.MAX_SAFE_INTEGER;
+			return aPriority - bPriority;
+		});
+}
+
+const poppy = getSortedImagesByProject('Poppy'); // Southern Cross North
+const fiorillo = getSortedImagesByProject('Forillo'); // The Shirley House
+const wise = getSortedImagesByProject('Wise Island');
+const tupah = getSortedImagesByProject('Tupah');
+const newcombe = getSortedImagesByProject('Newcombe');
+const kirzinger = getSortedImagesByProject('Kirzinger');
 ---
 
 <Layout title="John Duncan Ferguson - Portfolio">
@@ -180,7 +179,6 @@ const kirzinger = images.filter((image) =>
 			))
 			}
 		</ModalGallery>
-
 
 		<!-- ======== end the gallery stuff =========== -->
 

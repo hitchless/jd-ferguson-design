@@ -9,4 +9,5 @@ pathToImage: '/gallery/newcombe-1.jpg'
 alt: 'Newcombe 1'
 width: 2160
 height: 1375
+priority: 1
 ...

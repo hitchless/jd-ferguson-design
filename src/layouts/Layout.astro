@@ -10,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="bg-base-800">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="John Duncan Ferguson is a renowned designer of homes, from the Canadian west coast" />
@@ -24,7 +24,9 @@ const { title } = Astro.props;
 	<body>
 		<Header />
 		<div class="pb-16"></div>
-	  <slot />
+	  <div class="bg-base-50">
+			<slot />
+		</div>
 		<Footer />
 		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 	</body>

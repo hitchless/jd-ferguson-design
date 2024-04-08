@@ -16,6 +16,7 @@ const images = defineCollection({
     alt: z.string(),
     width: z.number(),
     height: z.number(),
+    priority: z.number().optional(),
   })
 });
 // Export a single `collections` object to register your collection(s)
