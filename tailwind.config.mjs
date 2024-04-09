@@ -19,8 +19,8 @@ module.exports = {
 				'hero-bio-lg': "url('/heroes/bio-lg.jpg')",
 				'hero-contact': "url('/heroes/contact.jpg')",
 				'hero-contact-lg': "url('/heroes/contact-lg.jpg')",
-				'hero-gratitude': "url('/heroes/gratitude.jpg')",
-				'hero-gratitude-lg': "url('/heroes/gratitude-lg.jpg')",
+				'hero-gratitude': "url('/heroes/gratitude-2.jpg')",
+				'hero-gratitude-lg': "url('/heroes/gratitude-lg-2.jpg')",
 
 				'craftsman': "url('/gallery/craftsman.jpg')",
 				'modern': "url('/gallery/modern.jpg')",
