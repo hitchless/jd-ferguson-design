@@ -8,5 +8,6 @@ type: 'photo'
 pathToImage: '/gallery/forillo/forillo-11.jpg'
 alt: 'Forillo 11'
 width: 2160
-height: 1440
+height: 1442
+priority: 4
 ...

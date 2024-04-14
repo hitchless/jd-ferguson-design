@@ -9,4 +9,5 @@ pathToImage: '/gallery/forillo/forillo-19.jpg'
 alt: 'Forillo 19'
 width: 2160
 height: 3239
+priority: 5
 ...
