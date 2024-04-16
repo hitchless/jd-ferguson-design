@@ -9,4 +9,5 @@ pathToImage: '/gallery/poppy/poppy-2.jpg'
 alt: 'Poppy 2'
 width: 2160
 height: 3239
+priority: 9
 ...
