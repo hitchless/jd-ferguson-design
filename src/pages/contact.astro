@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
 import ContactForm from '../components/ContactForm.astro';
 ---
 
@@ -9,10 +8,12 @@ import ContactForm from '../components/ContactForm.astro';
     description="Use this form to contact me, so we can talk about designing your next home."
 >
   <main class="pt-1">
-    <Hero slogan="Contact" more="let's talk" cta="" url="" bg="bg-hero-contact md:bg-hero-contact-lg" />
+    <!-- <Hero slogan="Contact" more="let's talk" cta="" url="" bg="bg-hero-contact md:bg-hero-contact-lg" /> -->
 
     <section class="bg-white dark:bg-gray-900">
       <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <h1 class="mb-4 text-5xl text-center font-extralight tracking-tight leading-none text-base-600 md:text-5xl lg:text-6xl">
+          Contact</h1>
         <ContactForm />
       </div>
     </section>
